@@ -9,8 +9,8 @@ public class Main {
 
     public static void main(String[] args) {
         testFirstPartOfHomework();
-        Fruit apple = new Apple();
-        Fruit orange = new Orange();
+        Apple apple = new Apple();
+        Orange orange = new Orange();
         Box box1 = new Box();
         Box box2 = new Box();
         Box box3 = new Box();

@@ -1,11 +1,21 @@
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
-public class Box<T> {
+
+public class Box <T extends  Fruit> {
     private ArrayList<Fruit> list = new ArrayList<>();
 
 
-    public void putFruitToBox(Fruit fruit, int count) {
+    public <T> void putFruitToBox(T fruit, int count) {
+
+        if (this.getList().size() == 0 || this.getList().get(0) == fruit) { //проверяем, что либо коробка пустая, либо в ней такие же фрукты
+            for (int i = 0; i < count; i++) {
+                list.add((Fruit) fruit);
+            }
+        }
+    }
+
+  /*  public <T> void putFruitToBox(Fruit fruit, int count) {
 
         if (this.getList().size() == 0 || this.getList().get(0) == fruit) { //проверяем, что либо коробка пустая, либо в ней такие же фрукты
             for (int i = 0; i < count; i++) {
@@ -13,14 +23,8 @@ public class Box<T> {
             }
         }
     }
+*/
 
-
-    @Override
-    public String toString() {
-        return "Box{" +
-                "list=" + list +
-                '}';
-    }
 
     public <T> T getWeight() {
         Float sum = 0.0f;
@@ -35,7 +39,7 @@ public class Box<T> {
     }
 
     public ArrayList<Fruit> getList() {
-        return list;
+        return (ArrayList<Fruit>) list;
     }
 
 
