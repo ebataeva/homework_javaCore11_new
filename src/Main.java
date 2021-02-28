@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -14,16 +13,13 @@ public class Main {
         Box box1 = new Box();
         Box box2 = new Box();
         Box box3 = new Box();
-        box1.putFruitToBox(apple, 3);
-        box2.putFruitToBox(orange, 2);
-        box3.putFruitToBox(apple, 2);
-        System.out.println(box1.compare(box2));
+        box1.addFruit(apple, 3);
+        box1.addFruit(orange, 2);
+      //  box1.sendToCard(box2);
 
-        box3.sendToCard(box1);
-        box1.putFruitToBox(apple, 1);
-        System.out.println("вес 3 = "+box3.getWeight());
-        System.out.println("вес 1 = "+box1.getWeight());
-        System.out.println(box1.compare(box2));
+        System.out.println(box1.getWeight());
+
+
 
     }
 
