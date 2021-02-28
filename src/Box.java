@@ -38,11 +38,11 @@ public class Box<T extends Fruit> {
             return false;
             }
         */
-    public  Boolean compare(Box box) {
+    public  Boolean compare(Box<?> box) {
         return box.getWeight() == this.getWeight();
     }
 
-    public void sendToCard(Box box) {
+    public void sendToCard(Box<T> box) {
 
         for (Fruit f : this.getList()) {
             box.getList().add(f);
