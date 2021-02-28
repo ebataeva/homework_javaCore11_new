@@ -25,32 +25,29 @@ public class Box<T extends Fruit> {
         return sum;
     }
 
-    public ArrayList<Fruit> getList() {
-        return (ArrayList<Fruit>) list;
+    public ArrayList<T> getList() {
+
+        return (ArrayList<T>) list;
     }
 
 
-    /*
-        public static Boolean compare(Box box1, Box box2) {
-            if (box1.getList().get(0) == (box2.getList().get(0)) && box1.getList().size() == box2.getList().size()) {
-                return true;
-            }
-            return false;
-            }
-        */
-    public  Boolean compare(Box<?> box) {
+
+    public Boolean compare(Box<?> box) {
         return box.getWeight() == this.getWeight();
     }
 
     public void sendToCard(Box<T> box) {
 
-        for (Fruit f : this.getList()) {
-            box.getList().add(f);
+        for (T f : list) {
+            box.add(f);
         }
-        
-            this.getList().clear();
 
+        this.getList().clear();
 
 
     }
+    public void add(T fruit) {
+        list.add(fruit);
+    }
+
 }
