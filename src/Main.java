@@ -11,8 +11,7 @@ public class Main {
         Apple apple = new Apple();
         Orange orange = new Orange();
         Box box1 = new Box();
-        Box box2 = new Box();
-        Box box3 = new Box();
+
         box1.addFruit(apple, 3);
         box1.addFruit(orange, 2);
       //  box1.sendToCard(box2);
