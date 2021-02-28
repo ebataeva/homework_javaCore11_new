@@ -47,9 +47,9 @@ public class Box<T extends Fruit> {
         for (Fruit f : this.getList()) {
             box.getList().add(f);
         }
-        for (int i = 0; i < this.getList().size(); i++) {
+        
             this.getList().clear();
-        }
+
 
 
     }
