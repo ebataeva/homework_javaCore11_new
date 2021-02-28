@@ -25,10 +25,10 @@ public class Box<T extends Fruit> {
         return sum;
     }
 
-    public ArrayList<T> getList() {
-
-        return (ArrayList<T>) list;
-    }
+//    public ArrayList<T> getList() {
+//
+//        return (ArrayList<T>) list;
+//    }
 
 
 
@@ -42,7 +42,7 @@ public class Box<T extends Fruit> {
             box.add(f);
         }
 
-        this.getList().clear();
+        list.clear();
 
 
     }

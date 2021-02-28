@@ -19,6 +19,8 @@ public class Main {
         box1.sendToCard(box3);
 
         System.out.println(box3.getWeight());
+        System.out.println(box1.getWeight());
+
         System.out.println(box1.compare(box2));
 
 
